@@ -1,0 +1,443 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  transition:0.4s;
+}
+
+body.light{
+  background:#f1f5f9;
+  color:#111;
+}
+
+/* Navbar */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 10%;
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+}
+
+body.light nav ul li a{
+  color:black;
+}
+
+nav button{
+  padding:6px 12px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:#38bdf8;
+  color:white;
+}
+
+/* Hero */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero span{
+  color:#38bdf8;
+}
+
+/* Typing Text Style */
+#typing{
+  font-size:24px;     /* Large Size */
+  font-weight:800;    /* Bold */
+  color:#ffffff;      /* White Color */
+  margin-top:15px;
+  display:inline-block;
+}
+
+.btn{
+  margin-top:20px;
+  padding:12px 25px;
+  background:#38bdf8;
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#0ea5e9;
+}
+
+/* Sections */
+section{
+  padding:40px 10%;
+  scroll-margin-top: 80px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  margin-bottom:50px;
+}
+
+/* About Section */
+.about-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.about-img img{
+  width:250px;
+  border-radius:20px;
+  box-shadow:0 5px 30px rgba(0,0,0,0.3);
+}
+
+.about-text{
+  max-width:500px;
+}
+
+.about-text h3{
+  font-size:28px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.about-text p{
+  margin-bottom:15px;
+  line-height:1.6;
+}
+
+/* Resume Button Only */
+.resume-download{
+  text-align:center;
+  margin:60px 0;
+}
+
+.resume-btn{
+  display:inline-block;
+  padding:14px 35px;
+  background:#38bdf8;
+  color:white;
+  font-size:18px;
+  font-weight:700;
+  text-decoration:none;
+  border-radius:50px;
+  transition:0.3s ease;
+  box-shadow:0 8px 20px rgba(56,189,248,0.4);
+}
+
+.resume-btn i{
+  margin-right:8px;
+}
+
+.resume-btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(56,189,248,0.6);
+}
+
+/* Experience Section */
+.experience-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.experience-box{
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  width:300px;
+  text-align:left;
+  transition: all 0.3s ease;
+}
+
+body.light .experience-box{
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.experience-box:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.experience-box h3{
+  color:#38bdf8;
+  margin-bottom:5px;
+}
+
+.company{
+  font-weight:600;
+  margin-bottom:5px;
+}
+
+.time{
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:10px;
+}
+
+.experience-box ul{
+  padding-left:18px;
+}
+
+.experience-box ul li{
+  margin-bottom:6px;
+  font-size:14px;
+}
+
+/* Technical Section */
+
+.technical-container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.tech-box{
+  background:#1e293b;
+  padding:30px;
+  border-radius:15px;
+  width:280px;
+  text-align:left;
+  transition:0.3s ease;
+}
+
+body.light .tech-box{
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tech-box h3{
+  margin-bottom:15px;
+  color:#38bdf8;
+  font-size:22px;
+}
+
+.tech-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.tech-box ul li{
+  margin-bottom:8px;
+  font-size:16px;
+}
+
+/* Qualification Section */
+
+.qualification-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.qualification-box{
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  width:280px;
+  text-align:left;
+
+  transition: all 0.3s ease;   /* Important */
+}
+
+.qualification-box:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+body.light .qualification-box{
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.qualification-box h3{
+  margin-bottom:10px;
+  color:#38bdf8;
+}
+
+.view-btn{
+  margin-top:10px;
+  padding:8px 15px;
+  border:none;
+  background:#38bdf8;
+  color:white;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.details{
+  margin-top:15px;
+  display:none;
+  font-size:14px;
+}
+
+.center-BCA{
+  text-align:center;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.center-MCA{
+  text-align:center;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+/* Projects */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  transition:0.4s;
+}
+
+body.light .card{
+  background:white;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+h3 {
+  text-align: center;
+  color: #38bdf8;;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* Contact */
+.contact-info{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.contact-card{
+background:#111;
+color:white;
+padding:25px;
+border-radius:10px;
+width:220px;
+text-align:center;
+transition:0.4s;
+border:1px solid #333;
+word-wrap:break-word;
+font-size:18px;
+font-weight:400;
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,255,200,0.3);
+border-color:#00ffc8;
+}
+
+.contact-form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border:none;
+border-radius:6px;
+background:#111;
+color:white;
+border:0px solid #333;
+}
+
+.contact-form button{
+padding:12px;
+background:#00ffc8;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:#00c9a7;
+transform:scale(1.05);
+}
+
+/* Scroll Animation */
+.hidden{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s;
+}
+
+.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Smooth Hover Effect for Boxes */
+
+.about-container,
+.tech-box,
+.card,
+.resume-download,
+.contact form {
+  transition: 0.3s ease;
+}
+
+.about-container:hover,
+.tech-box:hover,
+.card:hover,
+.resume-download:hover,
+.contact form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+} 

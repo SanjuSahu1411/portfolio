@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!--EmailJS-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <nav>
+    <h2 class="logo">Portfolio</h2> 
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#technical_skills">Technical Skills</a></li>
+      <li><a href="#qualifications">Qualifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button onclick="toggleMode()">Mode</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Hi, I'm <span>Sanjay Sahu</span></h1>
+    <p><span id="typing"></span></p>
+ <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="hidden">
+  <h2 class="section-title">About Me</h2>
+  <div class="about-container">
+    
+    <div class="about-img">
+      <img src="Circle_Pic.jpg" alt="profile">
+    </div>
+    <div class="about-text">
+      <p>
+        I'm an enthusiastic and self-motivated individual with a passion for technology and continuous learning. I have a strong knowledge of web development and programming and enjoy building modern and responsive websites.
+      </p>
+      <p>
+        I have a keen interest in using data-driven solutions to solve complex problems and improve business results.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!--CV Option-->
+<section class="resume-download">
+  <a href="SanjayS_Resume.pdf" target="_blank" class="resume-btn">
+    Download CV  <i class="fa-solid fa-download"></i>
+  </a>
+</section>
+
+<!--Experience-->
+<section id="experience" class="hidden">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-container">
+
+    <!-- Experience 1 -->
+     <div class="experience-box">
+      <h3>Web Development Internship</h3>
+      <p class="company">InternPe</p>
+      <p class="time">March 2025 - April 2025</p>
+
+      <ul>
+        <li>Engaged in web development tasks as part of the internship.</li>
+        <li>Gained hands on experience in developing web applications.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 2 -->
+     <div class="experience-box">
+      <h3>Communication Officer</h3>
+      <p class="company">Emergency Response Center(MP Dial 100 Project by BVG India Ltd</p>
+      <p class="time">Jan 2024 - Sep 2025</p>
+
+      <ul>
+        <li>Handled high - volume emergency calls and dispatched responses efficiently.</li>
+        <li>Maintained professionalism and calmness during critical situations.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="experience-box">
+      <h3>Support Executive</h3>
+      <p class="company">Medcare Solution Bhopal Office</p>
+      <p class="time">Jun 2023 - Oct 2023</p>
+
+      <ul>
+        <li>Providing insurance coordination and cashless processing support to hospitals.</li>
+        <li>Assisted in empanelment activities, claim handling and smooth hospital-insurance operations.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!--Technical-->
+<section id="technical_skills" class="hidden">
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="technical-container">
+
+    <div class="tech-box">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>C</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    <div class="tech-box">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="tech-box">
+      <h3>Version Control</h3>
+      <ul>
+        <li>Git</li>
+        <li>Visual Studio Code</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Qualification Section--> 
+<section id="qualifications" class="hidden">
+  <h2 class="section-title">Qualifications</h2>
+
+  <div class="qualification-container">
+
+    <!-- 10th -->
+    <div class="qualification-box">
+      <h3>10th Grade</h3>
+      <p>Govt Excellence Higher Secondary School</p>
+      <button onclick="toggleDetails('ten')" class="view-btn">View More</button>
+
+      <div id="ten" class="details">
+        <p><strong>Score:</strong> 91%</p>
+        <p><strong>Subjects:</strong> Math, English, IT/ITES, Science, Hindi, Social Science</p>
+        <p><strong>Board:</strong> MP Board Bhopal</p>
+        <p><strong>Completed:</strong>2018</p>
+      </div>
+    </div>
+
+    <!-- 12th -->
+    <div class="qualification-box">
+      <h3>12th Grade</h3>
+      <p>Govt Excellence Higher Secondary School</p>
+      <button onclick="toggleDetails('twelve')" class="view-btn">View More</button>
+
+      <div id="twelve" class="details">
+        <p><strong>Score:</strong> 74.60%</p>
+        <p><strong>Subjects:</strong> Math, Physics, Chemistry, IT/ITES, Hindi</p>
+        <p><strong>Board:</strong> MP Board Bhopal</p>
+        <p><strong>Completed:</strong>2020</p>
+      </div>
+    </div>
+
+    <!-- College -->
+    <div class="qualification-box">
+      <h3>UG And PG</h3>
+      <p>Computer Applications</p>
+      <button onclick="toggleDetails('college')" class="view-btn">View More</button>
+      <div id="college" class="details">
+        <p class="center-BCA">BCA</p>
+        <p><strong>College:</strong> Shri Lal Bahadur Shastri College Ganjbasoda</p>
+        <p><strong>Score:</strong> 72%</p>
+        <p><strong>Subjects:</strong> Studied core subjects of Operating systems, Computer Networks, Web development, DBMS</p>
+        <p><strong>University:</strong> BarkatUllah University Bhopal</p>
+        <p><strong>Completed:</strong> 2023</p>
+
+        <p class="center-MCA">MCA</p>
+        <p><strong>College:</strong> Bansal Institute of Science And Technology Bhopal</p>
+        <p><strong>Subjects:</strong> Studying subjects of C, Core Java, Python, AI & DSA</p>
+        <p><strong>University:</strong> RGPV University</p>
+        <p><strong>Pursuing</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects -->
+  <section id="projects" class="hidden">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>MP Tour Guide</h3>
+        <br>
+        <p>HTML, CSS, JavaScript, DOM manipulation, Event handling, and Data-driven UI updates.</p>
+        <br>
+        <p>MP Tour Guide, A Travel Search Engine project is developed as a web-based system that helps users explore the top 10 tourist destinations of Madhya Pradesh.</p>
+      </div>
+      <div class="card">
+        <h3>MedVerify</h3>
+        <br>
+        <p>API Integration, Frontend-Backend Communication, and Deployment Management and fetch reliable information through the OpenFDA API.</p>
+        <br>
+        <p>MedVerify is a full stack web application designed to help users verify the authenticity and details of medicines using official drug data. </p>
+      </div>
+  </section>
+
+  <!-- Contact -->
+   <div class="contact-info">
+    <div class="contact-card">
+      <h3>📞 Contact</h3>
+      <p>+91 8827297407</p>
+    </div>
+
+   <div class="contact-card">
+    <h3>📧 Email</h3>
+    <p>sanjaysahu14112@gmail.com</p>
+  </div>
+  
+  <div class="contact-card">
+    <h3>📍 Location</h3>
+    <p>Bhopal, Madhya Pradesh, India</p>
+  </div>
+</div>
+
+ <form id="contact-form" class="contact-form">
+  <input type="text" name="from_name" placeholder="Your Name" required>
+  <input type="email" name="from_email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+</section>
+
+  <script src="script.js"></script>
+</body>
+<script>
+emailjs.init("wp8GO3ns9MQRh79qm");
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+emailjs.sendForm(
+"service_g0207hg",
+"template_antye7j",
+this
+).then(function() {
+
+alert("Message Sent Successfully!");
+
+}, function(error) {
+
+alert("Failed to send message");
+
+});
+
+});
+</script>
+</html>
